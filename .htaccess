@@ -1,0 +1,23 @@
+# Security and Performance Settings
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "\.(sql|md|log|ini)$">
+    Require all denied
+</FilesMatch>
+
+# Enable error reporting in development (disable in production)
+# php_flag display_errors On
+# php_value error_reporting E_ALL
+
+# Set default charset
+AddDefaultCharset UTF-8
+
+# Prevent access to includes directory
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^includes/ - [F,L]
+</IfModule>
+

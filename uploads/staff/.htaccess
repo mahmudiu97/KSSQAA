@@ -1,0 +1,13 @@
+# Protect staff picture uploads
+Options -Indexes
+
+# Allow access to files
+<FilesMatch "\.(jpg|jpeg|png|gif)$">
+    Require all granted
+</FilesMatch>
+
+# Deny access to PHP files if any
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+

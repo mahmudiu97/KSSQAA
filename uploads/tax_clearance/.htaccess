@@ -1,0 +1,13 @@
+# Protect tax clearance uploads
+Options -Indexes
+
+# Allow access to files
+<FilesMatch "\.(pdf|jpg|jpeg|png)$">
+    Require all granted
+</FilesMatch>
+
+# Deny access to PHP files if any
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+
