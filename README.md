@@ -159,7 +159,4 @@ KSSQAA/
 - Default admin password should be changed before production use
 - Make sure PHP sessions are properly configured
 
-## License
-
-© 2024 Kaduna State Government. All rights reserved.
 
